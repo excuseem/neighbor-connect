@@ -49,6 +49,7 @@ class Offer(Base):
         Column('offer_id', Integer, ForeignKey('offers.id')),
         Column('tag', String, nullable=False)
     )
+    picture = Column(String)
 
 
 class Incident(Base):

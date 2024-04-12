@@ -25,29 +25,31 @@ class UserService(main_pb2_grpc.UserService):
     def CreateOffer(self, request, context):
         user = db_session.query(User).get(request.user_id)
         if not user:
-            return main_pb2.CreateOfferResponse(message='User not found')
+            return users_pb2.CreateOfferResponse(message='User not found')
 
         offer = Offer(
             user_id=request.user_id,
             place=request.place,
             offer=request.offer,
-            tags=[Tag(tag=t) for t in request.tags]
+            tags=[Tag(tag=t) for t in request.tags],
+            picture=request.picture
         )
         db_session.add(offer)
         db_session.commit()
 
-        return main_pb2.CreateOfferResponse(message='Offer Created Successfully')
+        return users_pb2.CreateOfferResponse(message='Offer Created Successfully')
 
     def GetOffers(self, request, context):
         offers = db_session.query(Offer).all()
 
-        return main_pb2.GetOffersResponse(
-            offers=[main_pb2.Offer(
+        return users_pb2.GetOffersResponse(
+            offers=[users_pb2.Offer(
                 id=offer.id,
                 user_id=offer.user_id,
                 place=offer.place,
                 offer=offer.offer,
-                tags=[tag.tag for tag in offer.tags]
+                tags=[tag.tag for tag in offer.tags],
+                picture=offer.picture
             ) for offer in offers]
         )
 

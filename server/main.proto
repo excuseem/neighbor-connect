@@ -40,6 +40,7 @@ message CreateOfferRequest {
     string place = 2;
     string offer = 3;
     repeated string tags = 4;
+    string picture = 5;
 }
 
 message CreateOfferResponse {
@@ -58,6 +59,7 @@ message Offer {
     string place = 3;
     string offer = 4;
     repeated string tags = 5;
+    string picture = 6;
 }
 
 message CreateIncidentRequest {

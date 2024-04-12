@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nmain.proto\x12\x05users\"\x9f\x01\n\x14\x43reateProfileRequest\x12\x10\n\x08\x66ullname\x18\x01 \x01(\t\x12\x11\n\ttelephone\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x04 \x01(\t\x12\x0c\n\x04\x63ity\x18\x05 \x01(\t\x12\x0e\n\x06street\x18\x06 \x01(\t\x12\x0b\n\x03\x62io\x18\x07 \x01(\t\x12\x17\n\x0fprofile_picture\x18\x08 \x01(\t\"(\n\x15\x43reateProfileResponse\x12\x0f\n\x07message\x18\x01 \x01(\t\"6\n\x13\x41uthenticateRequest\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"&\n\x14\x41uthenticateResponse\x12\x0e\n\x06status\x18\x01 \x01(\t\"Q\n\x12\x43reateOfferRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\x05\x12\r\n\x05place\x18\x02 \x01(\t\x12\r\n\x05offer\x18\x03 \x01(\t\x12\x0c\n\x04tags\x18\x04 \x03(\t\"&\n\x13\x43reateOfferResponse\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x12\n\x10GetOffersRequest\"1\n\x11GetOffersResponse\x12\x1c\n\x06offers\x18\x01 \x03(\x0b\x32\x0c.users.Offer\"P\n\x05Offer\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07user_id\x18\x02 \x01(\x05\x12\r\n\x05place\x18\x03 \x01(\t\x12\r\n\x05offer\x18\x04 \x01(\t\x12\x0c\n\x04tags\x18\x05 \x03(\t\"_\n\x15\x43reateIncidentRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x03 \x01(\t\x12\x0f\n\x07picture\x18\x04 \x01(\t\")\n\x16\x43reateIncidentResponse\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x15\n\x13GetIncidentsRequest\":\n\x14GetIncidentsResponse\x12\"\n\tincidents\x18\x01 \x03(\x0b\x32\x0f.users.Incident\"^\n\x08Incident\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07user_id\x18\x02 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x04 \x01(\t\x12\x0f\n\x07picture\x18\x05 \x01(\t2\xc0\x03\n\x0bUserService\x12J\n\rCreateProfile\x12\x1b.users.CreateProfileRequest\x1a\x1c.users.CreateProfileResponse\x12G\n\x0c\x41uthenticate\x12\x1a.users.AuthenticateRequest\x1a\x1b.users.AuthenticateResponse\x12\x44\n\x0b\x43reateOffer\x12\x19.users.CreateOfferRequest\x1a\x1a.users.CreateOfferResponse\x12>\n\tGetOffers\x12\x17.users.GetOffersRequest\x1a\x18.users.GetOffersResponse\x12M\n\x0e\x43reateIncident\x12\x1c.users.CreateIncidentRequest\x1a\x1d.users.CreateIncidentResponse\x12G\n\x0cGetIncidents\x12\x1a.users.GetIncidentsRequest\x1a\x1b.users.GetIncidentsResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nmain.proto\x12\x05users\"\x9f\x01\n\x14\x43reateProfileRequest\x12\x10\n\x08\x66ullname\x18\x01 \x01(\t\x12\x11\n\ttelephone\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x04 \x01(\t\x12\x0c\n\x04\x63ity\x18\x05 \x01(\t\x12\x0e\n\x06street\x18\x06 \x01(\t\x12\x0b\n\x03\x62io\x18\x07 \x01(\t\x12\x17\n\x0fprofile_picture\x18\x08 \x01(\t\"(\n\x15\x43reateProfileResponse\x12\x0f\n\x07message\x18\x01 \x01(\t\"6\n\x13\x41uthenticateRequest\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08password\x18\x02 \x01(\t\"&\n\x14\x41uthenticateResponse\x12\x0e\n\x06status\x18\x01 \x01(\t\"b\n\x12\x43reateOfferRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\x05\x12\r\n\x05place\x18\x02 \x01(\t\x12\r\n\x05offer\x18\x03 \x01(\t\x12\x0c\n\x04tags\x18\x04 \x03(\t\x12\x0f\n\x07picture\x18\x05 \x01(\t\"&\n\x13\x43reateOfferResponse\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x12\n\x10GetOffersRequest\"1\n\x11GetOffersResponse\x12\x1c\n\x06offers\x18\x01 \x03(\x0b\x32\x0c.users.Offer\"a\n\x05Offer\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07user_id\x18\x02 \x01(\x05\x12\r\n\x05place\x18\x03 \x01(\t\x12\r\n\x05offer\x18\x04 \x01(\t\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12\x0f\n\x07picture\x18\x06 \x01(\t\"_\n\x15\x43reateIncidentRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x03 \x01(\t\x12\x0f\n\x07picture\x18\x04 \x01(\t\")\n\x16\x43reateIncidentResponse\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x15\n\x13GetIncidentsRequest\":\n\x14GetIncidentsResponse\x12\"\n\tincidents\x18\x01 \x03(\x0b\x32\x0f.users.Incident\"^\n\x08Incident\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07user_id\x18\x02 \x01(\x05\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x04 \x01(\t\x12\x0f\n\x07picture\x18\x05 \x01(\t2\xc0\x03\n\x0bUserService\x12J\n\rCreateProfile\x12\x1b.users.CreateProfileRequest\x1a\x1c.users.CreateProfileResponse\x12G\n\x0c\x41uthenticate\x12\x1a.users.AuthenticateRequest\x1a\x1b.users.AuthenticateResponse\x12\x44\n\x0b\x43reateOffer\x12\x19.users.CreateOfferRequest\x1a\x1a.users.CreateOfferResponse\x12>\n\tGetOffers\x12\x17.users.GetOffersRequest\x1a\x18.users.GetOffersResponse\x12M\n\x0e\x43reateIncident\x12\x1c.users.CreateIncidentRequest\x1a\x1d.users.CreateIncidentResponse\x12G\n\x0cGetIncidents\x12\x1a.users.GetIncidentsRequest\x1a\x1b.users.GetIncidentsResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -30,25 +30,25 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_AUTHENTICATERESPONSE']._serialized_start=281
   _globals['_AUTHENTICATERESPONSE']._serialized_end=319
   _globals['_CREATEOFFERREQUEST']._serialized_start=321
-  _globals['_CREATEOFFERREQUEST']._serialized_end=402
-  _globals['_CREATEOFFERRESPONSE']._serialized_start=404
-  _globals['_CREATEOFFERRESPONSE']._serialized_end=442
-  _globals['_GETOFFERSREQUEST']._serialized_start=444
-  _globals['_GETOFFERSREQUEST']._serialized_end=462
-  _globals['_GETOFFERSRESPONSE']._serialized_start=464
-  _globals['_GETOFFERSRESPONSE']._serialized_end=513
-  _globals['_OFFER']._serialized_start=515
-  _globals['_OFFER']._serialized_end=595
-  _globals['_CREATEINCIDENTREQUEST']._serialized_start=597
-  _globals['_CREATEINCIDENTREQUEST']._serialized_end=692
-  _globals['_CREATEINCIDENTRESPONSE']._serialized_start=694
-  _globals['_CREATEINCIDENTRESPONSE']._serialized_end=735
-  _globals['_GETINCIDENTSREQUEST']._serialized_start=737
-  _globals['_GETINCIDENTSREQUEST']._serialized_end=758
-  _globals['_GETINCIDENTSRESPONSE']._serialized_start=760
-  _globals['_GETINCIDENTSRESPONSE']._serialized_end=818
-  _globals['_INCIDENT']._serialized_start=820
-  _globals['_INCIDENT']._serialized_end=914
-  _globals['_USERSERVICE']._serialized_start=917
-  _globals['_USERSERVICE']._serialized_end=1365
+  _globals['_CREATEOFFERREQUEST']._serialized_end=419
+  _globals['_CREATEOFFERRESPONSE']._serialized_start=421
+  _globals['_CREATEOFFERRESPONSE']._serialized_end=459
+  _globals['_GETOFFERSREQUEST']._serialized_start=461
+  _globals['_GETOFFERSREQUEST']._serialized_end=479
+  _globals['_GETOFFERSRESPONSE']._serialized_start=481
+  _globals['_GETOFFERSRESPONSE']._serialized_end=530
+  _globals['_OFFER']._serialized_start=532
+  _globals['_OFFER']._serialized_end=629
+  _globals['_CREATEINCIDENTREQUEST']._serialized_start=631
+  _globals['_CREATEINCIDENTREQUEST']._serialized_end=726
+  _globals['_CREATEINCIDENTRESPONSE']._serialized_start=728
+  _globals['_CREATEINCIDENTRESPONSE']._serialized_end=769
+  _globals['_GETINCIDENTSREQUEST']._serialized_start=771
+  _globals['_GETINCIDENTSREQUEST']._serialized_end=792
+  _globals['_GETINCIDENTSRESPONSE']._serialized_start=794
+  _globals['_GETINCIDENTSRESPONSE']._serialized_end=852
+  _globals['_INCIDENT']._serialized_start=854
+  _globals['_INCIDENT']._serialized_end=948
+  _globals['_USERSERVICE']._serialized_start=951
+  _globals['_USERSERVICE']._serialized_end=1399
 # @@protoc_insertion_point(module_scope)
