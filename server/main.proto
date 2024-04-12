@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+package users;
+
+service UserService {
+    rpc CreateProfile (CreateProfileRequest) returns (CreateProfileResponse);
+    rpc Authenticate (AuthenticateRequest) returns (AuthenticateResponse);
+    rpc CreateOffer (CreateOfferRequest) returns (CreateOfferResponse);
+    rpc GetOffers (GetOffersRequest) returns (GetOffersResponse);
+    rpc CreateIncident (CreateIncidentRequest) returns (CreateIncidentResponse);
+    rpc GetIncidents (GetIncidentsRequest) returns (GetIncidentsResponse);
+}
+
+message CreateProfileRequest {
+    string fullname = 1;
+    string telephone = 2;
+    string email = 3;
+    string country = 4;
+    string city = 5;
+    string street = 6;
+    string bio = 7;
+    string profile_picture = 8;
+}
+
+message CreateProfileResponse {
+    string message = 1;
+}
+
+message AuthenticateRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message AuthenticateResponse {
+    string status = 1;
+}
+
+message CreateOfferRequest {
+    int32 user_id = 1;
+    string place = 2;
+    string offer = 3;
+    repeated string tags = 4;
+}
+
+message CreateOfferResponse {
+    string message = 1;
+}
+
+message GetOffersRequest {}
+
+message GetOffersResponse {
+    repeated Offer offers = 1;
+}
+
+message Offer {
+    int32 id = 1;
+    int32 user_id = 2;
+    string place = 3;
+    string offer = 4;
+    repeated string tags = 5;
+}
+
+message CreateIncidentRequest {
+   int32 user_id = 1;
+   string description = 2;
+   string address = 3;
+   string picture = 4;
+}
+
+message CreateIncidentResponse {
+   string message = 1;
+}
+
+message GetIncidentsRequest {}
+
+message GetIncidentsResponse {
+   repeated Incident incidents = 1;
+}
+
+message Incident {
+   int32 id = 1;
+   int32 user_id = 2;
+   string description = 3;
+   string address = 4;
+   string picture = 5;
+}
